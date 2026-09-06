@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef2f7;
+  font-family: Inter, Arial, sans-serif;
+  color: #111827;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 28px;
+}
+
+.app-header {
+  max-width: 1200px;
+  margin: 0 auto 26px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #111827;
+}
+
+.app-header p {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+.builder-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.form-section,
+.preview-section,
+.list-section {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.form-section {
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.form-section h2,
+.preview-section h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.section-subtitle {
+  margin: 6px 0 18px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.resume-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #f9fafb;
+}
+
+.form-group h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.resume-form input,
+.resume-form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.resume-form input:focus,
+.resume-form textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.resume-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.primary-btn,
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-btn:hover,
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.preview-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.download-buttons button {
+  background: #111827;
+}
+
+.download-buttons .docx-btn {
+  background: #047857;
+}
+
+.download-buttons .docx-btn:hover {
+  background: #065f46;
+}
+
+/* Resume paper */
+.resume-paper {
+  width: 794px;
+  min-height: 1123px;
+  margin: 0 auto;
+  padding: 42px 54px;
+  background: #ffffff;
+  color: #111111;
+  font-family: "Times New Roman", Times, serif;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.16);
+}
+
+.resume-main-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.resume-main-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.contact-line {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+.resume-block {
+  margin-top: 15px;
+}
+
+.resume-block h3 {
+  margin: 0 0 7px;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid #111;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.resume-block p {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.resume-line {
+  font-size: 14px;
+}
+
+.bullet-line {
+  padding-left: 16px;
+  text-indent: -10px;
+}
+
+.muted-text {
+  color: #6b7280;
+}
+
+/* Saved list */
+.list-section {
+  max-width: 1400px;
+  margin: 26px auto 0;
+}
+
+.resume-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.resume-card {
+  padding: 18px;
+  border-radius: 14px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.resume-card h3 {
+  margin-top: 0;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1050px) {
+  .builder-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section {
+    position: static;
+    max-height: none;
+  }
+
+  .resume-paper {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 14px;
+  }
+
+  .resume-paper {
+    padding: 28px 22px;
+  }
+
+  .preview-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
