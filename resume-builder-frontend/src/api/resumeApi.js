@@ -33,3 +33,17 @@ export const generateAiSummary = async (resumeId) => {
   );
   return response.data;
 };
+
+export const analyzeJobFitUpload = async (formData) => {
+  const response = await axios.post(
+    `${API_BASE_URL}/api/job-fit/analyze`,
+    formData,
+    {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+      timeout: 45000,
+    }
+  );
+  return response.data;
+};
